@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-size: 13px;
+}
+
+.section-calculo {
+  display: flex;
+  justify-content: center;
+}
+
+.card-calculo {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 10px 100px;
+  border: 1px solid black;
+  background-color: #eee;
+}
+
+.card-calculo-dados {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 10px;
+}
+
+input[type="number"] {
+  border: none;
+  outline: none;
+  background-color: #eee;
+}
+
+#btn-calcular {
+  padding: 10px 20px;
+  font-size: 15px;
+  box-shadow: 2px 3px rgba(200, 200, 200, 0.8);
+  background-color: #ccc;
+}
+
+.telaResultado {
+  position: absolute;
+  background-color: white;
+  top: 100px;
+  padding: 100px 50px;
+  border: 1px solid black;
+  display: none;
+}
+
+.box-botao-fechar {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.btn-fechar {
+  padding: 5px 10px;
+  font-weight: 900;
+}
+
+.btn-fechar > span {
+  font-size: 9px;
+}
+
+.btn-fechar:hover {
+  cursor: pointer;
+}
+
+table, thead, tbody, th, td {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+table {
+  padding: 1px;
+}
+
+thead {
+  background-color: rgba(100, 100, 100, 0.6);
+}
