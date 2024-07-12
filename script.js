@@ -22,7 +22,8 @@ window.addEventListener('keydown', event => {
 //Cálculo do IMC
 function calcularIMC(peso, altura) {
   if(peso && altura) {
-    return (peso / (altura ** 2)).toFixed(1);
+    const resultado = (peso / (altura ** 2));
+    return resultado.toFixed(1);
   } else {
     return 0;
   }
@@ -54,7 +55,7 @@ function exibirCalculo() {
   let resultadoIMC = document.createElement('td');
   let resultadoClassificacao = document.createElement('td');
   //Pegar resultado IMC
-  let valorIMC = calcularIMC(inputPeso.value, inputAltura.value).toFixed(1);
+  let valorIMC = calcularIMC(inputPeso.value, inputAltura.value);
   //Pegar classificação IMC
   let classificacaoIMC = classificarIMC(valorIMC);
 
