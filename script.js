@@ -21,18 +21,34 @@ window.addEventListener('keydown', event => {
 
 //Cálculo do IMC
 function calcularIMC(peso, altura) {
+  //verifica se os dados foram inseridos
   if(peso && altura) {
-    const resultado = (peso / (altura ** 2));
-    return resultado.toFixed(1);
+    let resultado;
+    //verifica inserção de valores válidos
+    if (peso <= 0 || altura <= 0) {
+      resultado = 'Valor inválido. Favor inserir valores acima de 0.';
+    //calcula com base nos valores inseridos
+    } else {
+      resultado = (peso / (altura ** 2));
+      resultado = resultado.toFixed(1);
+    }
+    return resultado;
+  //comunica ausência de dados
   } else {
-    return 0;
+    return 'Dados não fornecidos.';
   }
 }
 
 //Classificação do IMC
 function classificarIMC(valorIMC) {
+  //verifica se não há resultado calculado
+  if (typeof valorIMC === 'string') {
+    return "Sem dados.";
+  }
+
+  //classifica com base no resultado do cálculo
   if(valorIMC == 0) {
-    return "Sem dados";
+    return "Sem dados.";
   } else if(valorIMC < 18.5) {
     return "Abaixo do peso.";
   } else if(valorIMC < 24.9) {
@@ -92,6 +108,7 @@ function calcularExemplo(peso, altura) {
   const classificacaoIMC = classificarIMC(valorIMC);
   console.log(`IMC: ${valorIMC} -- Classificação: ${classificacaoIMC}`);
 }
+
 //Abaixo do peso
 calcularExemplo(55, 1.8);
 //Peso normal

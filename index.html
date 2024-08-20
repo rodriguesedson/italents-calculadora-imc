@@ -10,33 +10,44 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Tela principal para entrada dos valores -->
   <div class="section-calculo" id="section-calculo">
     <div class="card-calculo" id="card-calculo">
       <h1>Calculadora IMC</h1>
+
       <div class="card-calculo-dados">
-        <label for="peso">Peso (Kg)</label>
-        <fieldset>
-          <legend>ctrl+i</legend>
-          <input type="number" id="peso" name="peso" placeholder="Ex.: 72">
-        </fieldset>
-        <label for="altura">Altura (m)</label>
-        <fieldset>
-          <legend>tab</legend>
-          <input type="number" id="altura" name="altura" placeholder="Ex.: 1.80">
-        </fieldset>
+        <div>
+          <label for="peso">Peso (Kg)</label>
+          <fieldset>
+            <legend>ctrl+i</legend>
+            <input type="number" id="peso" name="peso" placeholder="Ex.: 72">
+          </fieldset>
+        </div>
+
+        <div>
+          <label for="altura">Altura (m)</label>
+          <fieldset>
+            <legend>tab</legend>
+            <input type="number" id="altura" name="altura" placeholder="Ex.: 1.80">
+          </fieldset>
+        </div>
       </div>
+
       <button id="btn-calcular" type="button" onclick="exibirCalculo()">Calcular <br> (Enter)</button>
     </div>
 
+    <!-- Tela para exibição do resultado do cálculo -->
     <div class="telaResultado" id="telaResultado">
       <div class="box-botao-fechar">
         <button class="btn-fechar" onclick="fechar()"><span>(Esc)</span><br>X</button>
       </div>
+
       <table>
         <thead>
           <th>IMC</th>
           <th>Classificação</th>
         </thead>
+
         <tbody id="corpo-tabela">
           <tr></tr>
         </tbody>
